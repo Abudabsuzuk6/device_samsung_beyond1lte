@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/beyond1lte.mk
+    $(LOCAL_DIR)/voltage_beyond1lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    beyond1lte-eng \
-    beyond1lte-user \
-    beyond1lte-userdebug
+    voltage_beyond1lte-eng \
+    voltage_beyond1lte-user \
+    voltage_beyond1lte-userdebug

@@ -23,22 +23,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 ## Product API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-## Inscreen Fingerprint HAL
-TARGET_HAVE_FOD := true
+## Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Inherit some common VoltageOS stuff
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 ## Inherit from beyond1lte device
 $(call inherit-product, device/samsung/beyond1lte/device.mk)
 
-## Boot Animation
-TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_SCREEN_HEIGHT := 3040
-TARGET_SCREEN_WIDTH := 1440
+## Inscreen Fingerprint HAL
+TARGET_HAVE_FOD := true
 
-## Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+## Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1920
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := beyond1lte
+PRODUCT_NAME := voltage_beyond1lte
 PRODUCT_DEVICE := beyond1lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G973F
