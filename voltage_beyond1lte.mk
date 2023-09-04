@@ -33,7 +33,9 @@ $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 $(call inherit-product, device/samsung/beyond1lte/device.mk)
 
 ## Inscreen Fingerprint HAL
-TARGET_HAVE_FOD := true
+EXTRA_UDFPS_ANIMATIONS := true
+
+TARGET_HAVE_SPEN := true
 
 ## Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1920
